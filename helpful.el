@@ -1250,6 +1250,7 @@ If the source code cannot be found, return the sexp used."
         (with-current-buffer buf
           (save-excursion
             (save-restriction
+              (widen)
               (goto-char pos)
 
               (if (and (helpful--primitive-p sym callable-p)
